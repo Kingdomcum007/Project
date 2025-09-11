@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error = "อีเมลนี้ถูกใช้ไปแล้ว";
         }
     } else {
-        $sql = "INSERT INTO users (id, name, age, email, phone, username, password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (name, age, email, phone, username, password) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sissss", $name, $age, $email, $phone, $username, $password);
         if ($stmt->execute()) {

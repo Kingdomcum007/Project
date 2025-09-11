@@ -39,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Calculate BMR (Mifflin-St Jeor Equation)
         if ($gender == "male") {
-            $bmr = (10 * $weight) + (6.25 * $height * 100) - (5 * $age) + 5;
+            $bmr = (10 * $weight) + (6.25 * ($height/100) * 100) - (5 * $age) + 5;
             $bmr_info = "สำหรับผู้ชาย";
         } else { // female
-            $bmr = (10 * $weight) + (6.25 * $height * 100) - (5 * $age) - 161;
+            $bmr = (10 * $weight) + (6.25 * ($height/100) * 100) - (5 * $age) - 161;
             $bmr_info = "สำหรับผู้หญิง";
         }
     }
