@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fitness_db"; // You might want to create this database
+$dbname = "fitness_db"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
